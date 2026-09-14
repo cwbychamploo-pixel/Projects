@@ -1,10 +1,21 @@
 public class Pet
 {
     private String name;
+    private String type;
+    private int age;
 
     public Pet()
     {
-        setName("Max");
+        setName("Pet Name");
+        setType("Animal");
+        setAge(1);
+    }
+
+    public Pet(String petType, String petName, int petAge)
+    {
+        setType(petType);
+        setName(petName);
+        setAge(petAge);
     }
 
     public void setName(String petName)
@@ -17,18 +28,50 @@ public class Pet
         return name;
     }
 
-    public String toString()
+    public void setType(String petType)
     {
-        return "Pet information:\nName: " + name;
+        type = petType;
     }
 
-    public static void main(String[] args)
+    public String getType()
     {
-        Pet pet1 = new Pet();
-        System.out.println(pet1.toString());
+        return type;
+    }
 
-        Pet pet2 = new Pet();
-        pet2.setName("Luna");
-        System.out.println(pet2.toString());
+    public void setAge(int petAge)
+    {
+        age = petAge;
+    }
+
+    public int getAge()
+    {
+        return age;
+    }
+
+    public String speak()
+    {
+        if (type.equalsIgnoreCase("dog"))
+        {
+            return "Woof";
+        }
+        else if (type.equalsIgnoreCase("cat"))
+        {
+            return "Meow";
+        }
+        else
+        {
+            return "Yowl";
+        }
+    }
+
+    public String toString()
+    {
+        String info = "Pet information:\n";
+        info += "Type: " + type + "\n";
+        info += "Name: " + name + "\n";
+        info += "Sound: " + speak() + "\n";
+        info += "Age: " + age;
+
+        return info;
     }
 }

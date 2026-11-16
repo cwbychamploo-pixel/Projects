@@ -1,0 +1,8 @@
+#BlueJ class context
+#Sun Nov 15 18:53:05 EST 2026
+comment0.target=Towers
+comment1.params=n
+comment1.target=Towers(int)
+comment2.params=num fromPeg toPeg tempPeg
+comment2.target=void moveDiscs(int, int, int, int)
+numComments=3
